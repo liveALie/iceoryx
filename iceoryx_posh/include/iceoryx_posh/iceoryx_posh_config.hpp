@@ -23,8 +23,10 @@ namespace iox
 {
 namespace helper
 {
+/// dingshanchao///可变参数类模板的解包，仔细体会。
 template <typename... ConfigParts>
 struct SetDefaults;
+/// dingshanchao///模板特化
 
 template <typename FirstArg, typename... RemainderArgs>
 struct SetDefaults<FirstArg, RemainderArgs...>
@@ -71,7 +73,7 @@ struct Optimize<FinalArg>
     }
 };
 } // namespace helper
-
+/// dingshanchao///将不相干的config整合成一个类，然后根据向上转换的原则，调用不同基类的对象。这种模板参数的使用方式还是挺特别的。
 template <typename... ConfigParts>
 struct Config : public ConfigParts...
 {

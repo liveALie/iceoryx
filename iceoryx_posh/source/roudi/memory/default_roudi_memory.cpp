@@ -39,7 +39,7 @@ DefaultRouDiMemory::DefaultRouDiMemory(const RouDiConfig_t& roudiConfig) noexcep
     });
 }
 mepoo::MePooConfig DefaultRouDiMemory::introspectionMemPoolConfig() const noexcept
-{
+{ /// dingshanchao///此处为第二个mempool配置，是introspection
     constexpr uint32_t ALIGNMENT{mepoo::MemPool::CHUNK_MEMORY_ALIGNMENT};
     // have some spare chunks to still deliver introspection data in case there are multiple subscriber to the data
     // which are caching different samples; could probably be reduced to 2 with the instruction to not cache the

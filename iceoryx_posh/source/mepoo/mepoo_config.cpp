@@ -44,6 +44,7 @@ void MePooConfig::addMemPool(MePooConfig::Entry f_entry) noexcept
 /// this is the default memory pool configuration if no one is provided by the user
 MePooConfig& MePooConfig::setDefaults() noexcept
 {
+    /// dingshanchao///mempool的默认配置chunk_size,chunk_count
     m_mempoolConfig.push_back({128, 10000});
     m_mempoolConfig.push_back({1024, 5000});
     m_mempoolConfig.push_back({1024 * 16, 1000});

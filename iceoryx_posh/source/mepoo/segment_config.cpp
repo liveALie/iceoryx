@@ -24,6 +24,7 @@ namespace mepoo
 SegmentConfig& SegmentConfig::setDefaults() noexcept
 {
     auto groupName = posix::PosixGroup::getGroupOfCurrentProcess().getName();
+    /// dingshanchao///此处为shared_memory_segments的配置，此处为1个segment
     m_sharedMemorySegments.push_back({groupName, groupName, MePooConfig().setDefaults()});
     return *this;
 }

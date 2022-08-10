@@ -34,7 +34,7 @@ IceOryxRouDiApp::IceOryxRouDiApp(const config::CmdLineArgs_t& cmdLineArgs, const
 uint8_t IceOryxRouDiApp::run() noexcept
 {
     if (m_run)
-    {
+    { /// dingshanchao///roudi components主要包括两个roudiMemoryManager和portManager
         static cxx::optional<IceOryxRouDiComponents> m_rouDiComponents;
         auto componentsScopeGuard = cxx::makeScopedStatic(m_rouDiComponents, m_config);
 
